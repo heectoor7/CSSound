@@ -1,41 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>CSSound</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>CSSound - Acceso</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #121212, #000000);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: #181818;
+      padding: 40px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      border: 1px solid #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+
+    h1 span {
+      color: #ff7a00;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #b3b3b3;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      background: #282828;
+      border: 1px solid #333;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #ff7a00;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+      color: #b3b3b3;
+      font-size: 14px;
+    }
+
+    .remember input {
+      width: auto;
+    }
+
+    .enter-btn {
+      width: 100%;
+      padding: 15px;
+      background: #ff7a00;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .enter-btn:hover {
+      background: #ff8c1a;
+    }
+
+    .demo-note {
+      margin-top: 20px;
+      padding: 10px;
+      background: #282828;
+      border-radius: 5px;
+      font-size: 12px;
+      color: #b3b3b3;
+      text-align: center;
+      border: 1px solid #333;
+    }
+
+    .demo-note p {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
-
-  <div class="app">
-    <div class="sun"></div>
-
-    <div class="wave">
-      <img src="img/1792737.png" alt="ondas de musica">
-    </div>
-
+  <div class="login-box">
     <h1><span>CSS</span>ound</h1>
-  </div>
-
-  <!-- Barra inferior tipo Spotify -->
-  <div class="player">
-    <div class="song-info">
-      <strong>CSS Vibes</strong>
-      <span>CSSound</span>
-    </div>
-
-    <div class="controls">
-      <button class="play">▶</button>
-    </div>
-
-    <div class="progress">
-      <span>0:42</span>
-      <div class="bar">
-        <div class="bar-fill"></div>
+    
+    <form id="fake-form">
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" value="usuario_demo" readonly>
       </div>
-      <span>3:21</span>
+      
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" value="••••••••" readonly>
+      </div>
+      
+      <div class="remember">
+        <input type="checkbox" id="remember" checked disabled>
+        <label for="remember">Recordarme</label>
+      </div>
+      
+      <button type="button" class="enter-btn" onclick="enterApp()">Entrar</button>
+    </form>
+    
+    <div class="demo-note">
+      <p>Formulario ficticio para demostración</p>
+      <p>Credenciales ya cargadas</p>
     </div>
   </div>
 
+  <script>
+    function enterApp() {
+      const btn = document.querySelector('.enter-btn');
+      btn.textContent = 'Entrando...';
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        window.location.href = 'paginaPrinc/index.html';
+      }, 800);
+    }
+  </script>
 </body>
 </html>
