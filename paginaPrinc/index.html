@@ -3,136 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <title>CSSound</title>
+
+  <!-- Bootstrap local -->
   <link rel="stylesheet" href="bootstrap.min.css">
+
+  <!-- Tu CSS -->
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <h1 class="logo"><span>CSS</span>ound</h1>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top px-4">
+  <a class="navbar-brand fw-bold" href="#">
+    <span class="text-warning">CSS</span>ound
+  </a>
 
-    <nav>
-      <a class="active">Inicio</a>
-      <a>Buscar</a>
-      <a>Tu biblioteca</a>
-      <a href="index.html">Cerrar sesión</a>
-    </nav>
-  </aside>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <!-- MAIN -->
-  <main class="main">
-    <header class="topbar">
-      <h2>Canciones</h2>
-    </header>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-4">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Buscar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tu biblioteca</a>
+      </li>
+    </ul>
 
-    <section class="cards">
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/The-Dark-Side-of-the-Moon-03.jpg" alt=""></div>
-        <div class="card-info">
-          <h3>The Dark Side of the Moon</h3>
-          <p>Pink Floyd</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/thriller.jpg" alt=""></div>
-        <div class="card-info">
-          <h3>Thriller</h3>
-          <p>Michael Jackson</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/Abbey.jfif" alt=""></div>
-        <div class="card-info">
-          <h3>Abbey Road</h3>
-          <p>The Beatles</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/Back.jpg" alt=""></div>
-        <div class="card-info">
-          <h3>Back in Black</h3>
-          <p>AC/DC</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/Wall.jfif" alt=""></div>
-        <div class="card-info">
-          <h3>The Wall</h3>
-          <p>Pink Floyd</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/Fleet.jpg" alt=""></div>
-        <div class="card-info">
-          <h3>Rumours</h3>
-          <p>Fleetwood Mac</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/hotel.jpg" alt=""></div>
-        <div class="card-info">
-          <h3>Hotel California</h3>
-          <p>Eagles</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/neverminf.jfif" alt=""></div>
-        <div class="card-info">
-          <h3>Nevermind</h3>
-          <p>Nirvana</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/led.jpg" alt=""></div>
-        <div class="card-info">
-          <h3>Led Zeppelin IV</h3>
-          <p>Led Zeppelin</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image"><img src="/img/portadas/born.jpg" alt=""></div>
-        <div class="card-info">
-          <h3>Born to Run</h3>
-          <p>Bruce Springsteen</p>
-        </div>
-      </div>
-    </section>
-  </main>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link text-danger" href="index.html">Cerrar sesión</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-  <!-- PLAYER -->
-  <footer class="player">
-    <div class="song">
-      <div class="cover"></div>
-      <div>
-        <strong>Nombre de la canción</strong>
-        <span>Nombre del Artista</span>
+<!-- MAIN -->
+<main class="container-fluid main-content">
+  <h2 class="mb-4">Canciones</h2>
+
+  <!-- GRID BOOTSTRAP -->
+  <div class="row g-3">
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/The-Dark-Side-of-the-Moon-03.jpg" alt="">
+        <h6>The Dark Side of the Moon</h6>
+        <p>Pink Floyd</p>
       </div>
     </div>
 
-    <div class="controls">
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/thriller.jpg" alt="">
+        <h6>Thriller</h6>
+        <p>Michael Jackson</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/Abbey.jfif" alt="">
+        <h6>Abbey Road</h6>
+        <p>The Beatles</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/Back.jpg" alt="">
+        <h6>Back in Black</h6>
+        <p>AC/DC</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/Wall.jfif" alt="">
+        <h6>The Wall</h6>
+        <p>Pink Floyd</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/Fleet.jpg" alt="">
+        <h6>Rumours</h6>
+        <p>Fleetwood Mac</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/hotel.jpg" alt="">
+        <h6>Hotel California</h6>
+        <p>Eagles</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/neverminf.jfif" alt="">
+        <h6>Nevermind</h6>
+        <p>Nirvana</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/led.jpg" alt="">
+        <h6>Led Zeppelin IV</h6>
+        <p>Led Zeppelin</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="music-card">
+        <img src="/img/portadas/born.jpg" alt="">
+        <h6>Born to Run</h6>
+        <p>Bruce Springsteen</p>
+      </div>
+    </div>
+</div>
+</main>
+
+<!-- PLAYER -->
+<footer class="player">
+  <div class="song">
+    <div class="cover">
+      <img src="/img/portadas/thriller.jpg" alt="">
+    </div>
+    <div>
+      <strong>Thriller</strong>
+      <span>Michael Jackson</span>
+    </div>
+  </div>
+
+  <div class="controls">
       <button>⏮</button>
       <button class="play">▶</button>
       <button>⏭</button>
     </div>
 
-    <div class="progress">
-      <span>0:58</span>
-      <div class="bar">
-        <div class="fill"></div>
-      </div>
-      <span>3:21</span>
+  <div class="progress">
+    <span>0:58</span>
+    <div class="bar">
+      <div class="fill"></div>
     </div>
-  </footer>
+    <span>3:21</span>
+  </div>
+</footer>
 
+<!-- Bootstrap JS -->
+<script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>

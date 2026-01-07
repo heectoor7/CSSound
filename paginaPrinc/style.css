@@ -1,13 +1,15 @@
 :root {
   --bg-main: #121212;
-  --bg-sidebar: #000000;
   --bg-player: #181818;
   --text-main: #ffffff;
   --text-muted: #b3b3b3;
   --accent: #ff7a00;
-  --card-bg: #1a1a1a;
+  --card-bg: #222222;
 }
 
+/* =========================
+   RESET
+========================= */
 * {
   box-sizing: border-box;
 }
@@ -15,95 +17,60 @@
 body {
   margin: 0;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  grid-template-rows: 1fr 90px;
-  grid-template-areas:
-    "sidebar main"
-    "player player";
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--bg-main);
   color: var(--text-main);
+  overflow: hidden; /* el body NO scrollea */
 }
 
-/* SIDEBAR */
-.sidebar {
-  grid-area: sidebar;
-  background-color: var(--bg-sidebar);
-  padding: 20px;
+/* =========================
+   MAIN CONTENT (SCROLL)
+========================= */
+.main-content {
+  padding-top: 70px;      /* navbar */
+  padding-bottom: 90px;   /* player */
+  height: 100vh;
+  background: linear-gradient(135deg, #ff7700, #242424);
+  overflow-y: auto;
 }
 
-.logo {
-  margin-bottom: 40px;
-}
-
-.logo span {
-  color: var(--accent);
-}
-
-nav a {
-  display: block;
-  margin-bottom: 15px;
-  color: var(--text-muted);
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 8px 0;
-}
-
-nav a.active,
-nav a:hover {
-  color: var(--text-main);
-}
-
-/* MAIN */
-.main {
-  grid-area: main;
-  padding: 20px;
-}
-
-.topbar {
-  margin-bottom: 25px;
-}
-
-.topbar h2 {
+.main-content h2 {
   font-size: 22px;
-  margin: 0;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 16px;
-}
-
-.card {
-  background: #222222;
+/* =========================
+   MUSIC CARD
+========================= */
+.music-card {
+  background: var(--card-bg);
   border-radius: 8px;
   padding: 12px;
-  transition: all 0.2s ease;
   cursor: pointer;
 
   aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
+
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.card:hover {
+.music-card:hover {
   background: #161616;
   transform: translateY(-2px);
 }
 
-.card-image img{
+.music-card img {
   width: 100%;
   aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 6px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.card-info h3 {
-  margin: 0 0 6px 0;
+.music-card h6 {
+  margin: 0 0 4px 0;
   font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
@@ -111,55 +78,45 @@ nav a:hover {
   text-overflow: ellipsis;
 }
 
-.card-info p {
+.music-card p {
   margin: 0;
   font-size: 12px;
   color: var(--text-muted);
 }
 
-/* PLAYER FIJO */
+/* =========================
+   PLAYER
+========================= */
 .player {
-  grid-area: player;
-  background-color: var(--bg-player);
-  border-top: 1px solid #282828;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 0 20px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 80px; /* Más pequeño */
+
+  height: 80px;
+  background-color: var(--bg-player);
+  border-top: 1px solid #282828;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding: 0 20px;
   z-index: 100;
 }
 
-/* Ajustar el main para que no quede tapado por el player */
-.main {
-  background: linear-gradient(135deg, #ff7700, #242424);
-  grid-area: main;
-  padding: 20px;
-  overflow-y: auto;
-  margin-bottom: 80px; /* Altura del player */
-}
-
-/* Opcional: Ajustar el grid para que funcione mejor con el player fijo */
-body {
-  grid-template-rows: 1fr;
-  grid-template-areas:
-    "sidebar main";
-}
-
+/* =========================
+   SONG INFO
+========================= */
 .song {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.cover {
-  width: 48px; /* Más pequeño */
+.cover img{
+  width: 48px;
   height: 48px;
-  background: #2a2a2a;
   border-radius: 6px;
 }
 
@@ -170,11 +127,13 @@ body {
 }
 
 .song span {
-  color: var(--text-muted);
   font-size: 11px;
+  color: var(--text-muted);
 }
 
-/* CONTROLS */
+/* =========================
+   CONTROLS
+========================= */
 .controls {
   display: flex;
   gap: 12px;
@@ -202,14 +161,17 @@ body {
   height: 32px;
   border-radius: 50%;
   background-color: var(--accent);
-  color: black;
+  color: #000;
   font-size: 14px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* PROGRESS */
+/* =========================
+   PROGRESS BAR
+========================= */
 .progress {
   display: flex;
   align-items: center;
@@ -217,11 +179,11 @@ body {
   font-size: 11px;
   color: var(--text-muted);
   justify-content: flex-end;
+  background-color: var(--bg-player);
 }
 
 .bar {
-  flex: 1;
-  max-width: 300px;
+  width: 220px;
   height: 3px;
   background-color: #404040;
   border-radius: 2px;
@@ -235,20 +197,22 @@ body {
   border-radius: 2px;
 }
 
-/* Scrollbar más sutil */
-.main::-webkit-scrollbar {
+/* =========================
+   SCROLLBAR
+========================= */
+.main-content::-webkit-scrollbar {
   width: 8px;
 }
 
-.main::-webkit-scrollbar-track {
+.main-content::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.main::-webkit-scrollbar-thumb {
+.main-content::-webkit-scrollbar-thumb {
   background: #444444;
   border-radius: 4px;
 }
 
-.main::-webkit-scrollbar-thumb:hover {
+.main-content::-webkit-scrollbar-thumb:hover {
   background: #555555;
 }
