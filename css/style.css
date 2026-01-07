@@ -23,6 +23,10 @@ body {
   overflow: hidden; /* el body NO scrollea */
 }
 
+.css-highlight {
+  color: var(--accent);
+}
+
 /* =========================
    MAIN CONTENT (SCROLL)
 ========================= */
