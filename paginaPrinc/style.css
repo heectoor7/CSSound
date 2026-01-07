@@ -103,6 +103,10 @@ nav a:hover {
   margin-bottom: 12px;
 }
 
+.card-image img {
+  width: auto;
+}
+
 .card-info h3 {
   margin: 0 0 6px 0;
   font-size: 14px;
