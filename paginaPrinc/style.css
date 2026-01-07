@@ -136,7 +136,7 @@ nav a:hover {
 
 /* Ajustar el main para que no quede tapado por el player */
 .main {
-  background: linear-gradient(135deg, #ff3b1a, #ff7a00);
+  background: linear-gradient(135deg, #ff7700, #242424);
   grid-area: main;
   padding: 20px;
   overflow-y: auto;
