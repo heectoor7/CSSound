@@ -30,7 +30,7 @@ body {
   padding-top: 70px;      /* navbar */
   padding-bottom: 90px;   /* player */
   height: 100vh;
-  background: linear-gradient(135deg, #ff7700, #242424);
+  background: linear-gradient(135deg, #000000, #000000);
   overflow-y: auto;
 }
 
