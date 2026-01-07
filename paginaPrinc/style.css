@@ -95,16 +95,11 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-.card-image {
+.card-image img{
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: #2a2a2a;
   border-radius: 6px;
   margin-bottom: 12px;
-}
-
-.card-image img {
-  width: auto;
 }
 
 .card-info h3 {
