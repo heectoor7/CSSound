@@ -1,0 +1,143 @@
+/* MUSIC CARD */
+.music-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.music-card:hover {
+  background: #161616;
+  transform: translateY(-2px);
+}
+
+.music-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.music-card h6 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.music-card p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* PLAYER DETAILS */
+.song {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.song strong {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.song span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.cover img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.play {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #000;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  justify-content: flex-end;
+  background-color: var(--bg-player);
+}
+
+.bar {
+  width: 220px;
+  height: 3px;
+  background-color: #404040;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.fill {
+  width: 40%;
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+/* ============================================ */
+/* Barra de búsqueda */
+/* ============================================ */
+#search-input {
+  width: 250px;
+  height: 25px;
+  padding: 10px 14px;
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Texto del placeholder */
+#search-input::placeholder {
+  color: #888;
+}
+
+/* Al hacer foco */
+#search-input:focus {
+  border-color: #3a3a3a;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+}
+
+/* Al pasar el ratón */
+#search-input:hover {
+  background-color: #242424;
+}

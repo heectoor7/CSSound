@@ -1,0 +1,10 @@
+:root {
+  --bg-main: #000000;
+  --bg-player: #181818;
+  --card-bg: #222222;
+
+  --text-main: #ffffff;
+  --text-muted: #b3b3b3;
+
+  --accent: #ff7a00;
+}
