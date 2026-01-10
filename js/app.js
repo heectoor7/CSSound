@@ -10,30 +10,48 @@ if (modal) {
   const modalName = document.getElementById("modalName");
   const modalGenre = document.getElementById("modalGenre");
   const modalSongs = document.getElementById("modalSongs");
+  const modalDescription = document.getElementById("modalDescription"); // Cambia a modalDesc si usas ese id
   const closeBtn = document.querySelector(".close-modal");
-  const modalDesc = document.getElementById("modalDesc"); 
 
-tarjetasArtista.forEach(card => {
-  card.addEventListener("click", () => {
-    modalImg.src = card.dataset.img;
-    modalName.textContent = card.dataset.name;
-    modalGenre.textContent = card.dataset.genre;
-    modalSongs.textContent = card.dataset.songs;
-    
-    const desc = card.getAttribute("data-desc") || "";
-    modalDesc.textContent = desc;
+  tarjetasArtista.forEach(card => {
+    card.addEventListener("click", () => {
+      // 1. PRIMERO: Quitar animación de todas las tarjetas
+      tarjetasArtista.forEach(c => {
+        c.classList.remove("animada"); // o "seleccionada" o "resaltada"
+      });
+      
+      // 2. SEGUNDO: Añadir animación a esta tarjeta
+      card.classList.add("animada"); // Usa el mismo nombre que en tu CSS
+      
+      // 3. TERCERO: Tu código actual del modal
+      modalImg.src = card.dataset.img;
+      modalName.textContent = card.dataset.name;
+      modalGenre.textContent = card.dataset.genre;
+      modalSongs.textContent = card.dataset.songs;
+      
+      // Asegúrate que esto coincida con tu HTML
+      const descripcion = card.getAttribute("data-desc") || "";
+      document.getElementById("modalDesc").textContent = descripcion;
 
-    modal.classList.add("active");
+      modal.classList.add("active");
+    });
   });
-});
 
   closeBtn.addEventListener("click", () => {
     modal.classList.remove("active");
+    // 4. QUITAR animación al cerrar el modal
+    tarjetasArtista.forEach(c => {
+      c.classList.remove("animada"); // o "seleccionada" o "resaltada"
+    });
   });
 
   modal.addEventListener("click", e => {
     if (e.target === modal) {
       modal.classList.remove("active");
+      // 5. QUITAR animación al hacer clic fuera
+      tarjetasArtista.forEach(c => {
+        c.classList.remove("animada"); // o "seleccionada" o "resaltada"
+      });
     }
   });
 }

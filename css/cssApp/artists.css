@@ -46,4 +46,32 @@
 }
 
 
-/*animacion de los bordes robada de yoputbe*/
+/* BRILLO QUE SE MUEVE ALREDEDOR DEL MODAL */
+.artist-modal.active .artist-modal-content {
+  position: relative;
+  animation: brilloCircular 3s linear infinite;
+}
+
+/* SOLO BRILLO NARANJA ALREDEDOR DEL MODAL */
+.artist-modal.active .artist-modal-content {
+  position: relative;
+  box-shadow: 
+    0 0 20px rgba(255, 122, 0, 0.3),
+    0 0 40px rgba(255, 122, 0, 0.2),
+    0 0 60px rgba(255, 122, 0, 0.1);
+
+}
+
+@keyframes pulsarBrillo {
+  from {
+    box-shadow: 
+      0 0 20px rgba(255, 122, 0, 0.3),
+      0 0 40px rgba(255, 122, 0, 0.2);
+  }
+  to {
+    box-shadow: 
+      0 0 30px rgba(255, 122, 0, 0.5),
+      0 0 60px rgba(255, 122, 0, 0.3),
+      0 0 90px rgba(255, 122, 0, 0.1);
+  }
+}
