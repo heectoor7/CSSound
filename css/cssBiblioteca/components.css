@@ -1,0 +1,209 @@
+/* MUSIC CARD */
+.lista-canciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fila-cancion {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.fila-cancion:hover {
+  background-color: #1f1f1f;
+}
+
+.fila-cancion img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.texto-cancion {
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-cancion strong {
+  color: #eaeaea;
+  font-size: 15px;
+}
+
+.texto-cancion span {
+  font-size: 13px;
+  opacity: .6;
+}
+
+
+/* PLAYER DETAILS */
+.song {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.song strong {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.song span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.cover img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.play {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #000;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  justify-content: flex-end;
+  background-color: var(--bg-player);
+}
+
+.bar {
+  width: 220px;
+  height: 3px;
+  background-color: #404040;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.fill {
+  width: 40%;
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+/* ============================================ */
+/* Barra de búsqueda */
+/* ============================================ */
+#search-input {
+  width: 250px;
+  height: 25px;
+  padding: 10px 14px;
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Texto del placeholder */
+#search-input::placeholder {
+  color: #888;
+}
+
+/* Al hacer foco */
+#search-input:focus {
+  border-color: #3a3a3a;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+}
+
+/* Al pasar el ratón */
+#search-input:hover {
+  background-color: #242424;
+}
+
+/* ============================================ */
+/* Cancion sonando biblioteca */
+/* ============================================ */
+
+/* Contenedor principal */
+.sonando-ahora {
+  position: fixed;         
+  top: 70px;               
+  bottom: 85px;            
+  right: 40px;                
+  width: 40%;              
+  display: flex;
+  justify-content: center; 
+  padding: 20px;           
+  box-sizing: border-box;
+  background: linear-gradient( 180deg, #3a3a3a 0%, #1e1e1e 40%, #121212 100% ); 
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+}
+
+
+/* Portada grande */
+.sonando-card img {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+}
+
+/* Info canción */
+.info-sonando {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #fff;
+}
+
+.etiqueta-sonando {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+/* Título canción */
+#titulo-actual {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Artista */
+#artista-actual {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+

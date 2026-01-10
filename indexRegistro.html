@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>CSSound - Acceso</title>
+  <title>CSSound - Registro</title>
   <style>
     * {
       margin: 0;
@@ -23,7 +23,7 @@
       background-position: center;
     }
 
-    .caja-login {
+    .caja-registro {
       background: #181818;
       padding: 40px;
       border-radius: 10px;
@@ -75,61 +75,47 @@
       border-color: #ff7a00;
     }
 
-    .recordarme {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 25px;
-      color: #b3b3b3;
-      font-size: 14px;
-    }
-
-    .recordarme input {
-      width: auto;
-    }
-
-    .boton-entrar,
-    .boton-registro {
+    .boton-registrarse {
       display: inline-block;
       width: 100%;
       padding: 15px;
+      background: #ff7a00;
+      color: black;
       text-decoration: none;
       border-radius: 5px;
       font-size: 18px;
       font-weight: bold;
       transition: background 0.3s;
-      text-align: center;
-      margin-bottom: 10px;
+      margin-top: 10px;
     }
 
-    .boton-entrar {
-      background: #ff7a00;
-      color: #000000;
-    }
-
-    .boton-entrar:hover {
+    .boton-registrarse:hover {
       background: #ff8c1a;
-    }
-
-    .boton-registro {
-      background: #282828;
-      color: #ff7a00;
-      border: 1px solid #ff7a00;
-    }
-
-    .boton-registro:hover {
-      background: #ff7a00;
-      color: black;
     }
   </style>
 </head>
 <body>
-  <div class="caja-login">
+  <div class="caja-registro">
     <h1><span>CSS</span>ound</h1>
-    <div class="subtitulo">Login</div>
+    <div class="subtitulo">Registro</div>
 
     <div class="grupo-formulario">
-      <label for="usuario">Usuario</label>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" placeholder="Introduce tu nombre completo">
+    </div>
+
+    <div class="grupo-formulario">
+      <label for="fecha">Fecha de nacimiento</label>
+      <input type="date" id="fecha">
+    </div>
+
+    <div class="grupo-formulario">
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" placeholder="Introduce tu correo">
+    </div>
+
+    <div class="grupo-formulario">
+      <label for="usuario">Nombre de usuario</label>
       <input type="text" id="usuario" placeholder="Introduce tu usuario">
     </div>
     
@@ -137,15 +123,9 @@
       <label for="contrasena">Contraseña</label>
       <input type="password" id="contrasena" placeholder="Introduce tu contraseña">
     </div>
-    
-    <div class="recordarme">
-      <input type="checkbox" id="recordarme">
-      <label for="recordarme">Recordarme</label>
-    </div>
-    
-    <a href="indexApp.html" class="boton-entrar">Entrar</a>
 
-    <a href="indexRegistro.html" class="boton-registro">¿No tienes cuenta?</a>
+    <!-- Botón como enlace -->
+    <a href="indexApp.html" class="boton-registrarse">Registrarse</a>
   </div>
 </body>
 </html>

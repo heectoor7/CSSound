@@ -1,0 +1,36 @@
+.titulo-artistas {
+  padding-top: 60px;
+}
+
+.horizontal-scroll {
+  display: flex;
+  gap: 20px;
+  padding: 20px 40px;
+  overflow-x: auto;
+}
+
+/* ARTIST CARD */
+.artista-card {
+  width: 200px;
+  height: 260px;
+  flex-shrink: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.artista-card:hover {
+  transform: translateY(-4px);
+}
+
+.artista-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.nombre-artista {
+  margin-top: 8px;
+}
