@@ -11,17 +11,21 @@ if (modal) {
   const modalGenre = document.getElementById("modalGenre");
   const modalSongs = document.getElementById("modalSongs");
   const closeBtn = document.querySelector(".close-modal");
+  const modalDesc = document.getElementById("modalDesc"); 
 
-  tarjetasArtista.forEach(card => {
-    card.addEventListener("click", () => {
-      modalImg.src = card.dataset.img;
-      modalName.textContent = card.dataset.name;
-      modalGenre.textContent = card.dataset.genre;
-      modalSongs.textContent = card.dataset.songs;
+tarjetasArtista.forEach(card => {
+  card.addEventListener("click", () => {
+    modalImg.src = card.dataset.img;
+    modalName.textContent = card.dataset.name;
+    modalGenre.textContent = card.dataset.genre;
+    modalSongs.textContent = card.dataset.songs;
+    
+    const desc = card.getAttribute("data-desc") || "";
+    modalDesc.textContent = desc;
 
-      modal.classList.add("active");
-    });
+    modal.classList.add("active");
   });
+});
 
   closeBtn.addEventListener("click", () => {
     modal.classList.remove("active");

@@ -34,3 +34,16 @@
 .nombre-artista {
   margin-top: 8px;
 }
+#modalDesc {
+  text-align: justify;
+  padding: 0;
+  margin: 15px 0;
+  width: 100%;
+  hyphens: auto; 
+}
+#modalName {
+  color: var(--accent); 
+}
+
+
+/*animacion de los bordes robada de yoputbe*/
