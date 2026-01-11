@@ -1,0 +1,112 @@
+/* Tablets (576px - 992px) */
+@media (max-width: 992px) {
+  /* Navbar: búsqueda y elementos apilados */
+  #search-input {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .navbar-nav.ms-4 {
+    flex-direction: column;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-top: 10px;
+  }
+
+  /* Main columns: slider y canciones apilados */
+  .main-content .col-lg-4,
+  .main-content .col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Música cards: más grandes y centradas */
+  .music-card {
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+
+  /* Títulos de secciones centrados */
+  h2, .titulo-artistas {
+    text-align: center;
+  }
+
+  /* Artistas horizontal scroll ajustado */
+  .horizontal-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .artista-card {
+    display: inline-block;
+    margin-right: 15px;
+    width: 150px;
+  }
+
+  /* Podcasts: columna vertical */
+  .podcast-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .podcast-text, .podcast-image {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .podcast-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Móviles (max-width: 576px) */
+@media (max-width: 576px) {
+  /* Navbar: botones y búsqueda más compactos */
+  #search-input {
+    font-size: 14px;
+  }
+
+  .navbar-nav.ms-4,
+  .navbar-nav.ms-auto {
+    text-align: center;
+  }
+
+  /* Carrusel: altura menor para móviles */
+  #carouselExample video {
+    height: 450px;
+    object-fit: cover;
+  }
+
+  /* Music cards: 2 por fila */
+  .row.g-3 > .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Artistas: tarjetas más pequeñas */
+  .artista-card {
+    width: 120px;
+    margin-right: 10px;
+  }
+
+  /* Podcasts: texto más pequeño */
+  .podcast-text h2, .podcast-text h3 {
+    font-size: 18px;
+  }
+
+  .podcast-text p {
+    font-size: 14px;
+  }
+
+  .podcast-play-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .player {
+    height: 100px;
+  }
+}

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSSound - Acceso</title>
   <style>
     * {
@@ -18,7 +20,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-image: url(/multimedia/img/inicio/fondo.jpg);
+      background-image: url(/multimedia/img/inicio/fondoChat.png);
       background-size: cover;
       background-position: center;
     }
@@ -28,7 +30,7 @@
       padding: 40px;
       border-radius: 10px;
       width: 350px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 20px rgba(148, 148, 148, 0.5);
       border: 1px solid #333;
       text-align: center;
     }
@@ -121,8 +123,80 @@
       background: #ff7a00;
       color: black;
     }
+
+    /* Tablets (992px) */
+    @media (max-width: 992px) {
+      .caja-login {
+        width: 300px;
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .subtitulo {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 15px;
+      }
+
+      .boton-entrar,
+      .boton-registro {
+        padding: 12px;
+        font-size: 16px;
+      }
+    }
+
+    /* Responsive para Móviles (576px) */
+    @media (max-width: 576px) {
+      body {
+        min-height: 100vh;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .caja-login {
+        width: 100%;
+        max-width: 320px;
+        padding: 25px;
+        margin: 0 auto;
+        /* centrado horizontal */
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .subtitulo {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .recordarme {
+        font-size: 13px;
+      }
+
+      .boton-entrar,
+      .boton-registro {
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="caja-login">
     <h1><span>CSS</span>ound</h1>
@@ -132,20 +206,21 @@
       <label for="usuario">Usuario</label>
       <input type="text" id="usuario" placeholder="Introduce tu usuario">
     </div>
-    
+
     <div class="grupo-formulario">
       <label for="contrasena">Contraseña</label>
       <input type="password" id="contrasena" placeholder="Introduce tu contraseña">
     </div>
-    
+
     <div class="recordarme">
       <input type="checkbox" id="recordarme">
       <label for="recordarme">Recordarme</label>
     </div>
-    
+
     <a href="indexApp.html" class="boton-entrar">Entrar</a>
 
     <a href="indexRegistro.html" class="boton-registro">¿No tienes cuenta?</a>
   </div>
 </body>
+
 </html>

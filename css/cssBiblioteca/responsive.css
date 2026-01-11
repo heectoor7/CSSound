@@ -1,0 +1,157 @@
+@media (max-width: 992px) {
+
+  /* ============================= */
+  /* TÍTULOS */
+  /* ============================= */
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  /* LISTA DE CANCIONES */
+  .fila-cancion {
+    width: 400px; 
+  }
+
+  .fila-cancion img {
+    width: 65px; 
+    height: 65px;
+  }
+
+  .texto-cancion strong {
+    font-size: 1.05rem;
+  }
+
+  .texto-cancion span {
+    font-size: 0.9rem;
+  }
+
+  /* SONANDO AHORA (tablet) */
+  #portada-actual {
+    max-width: 280px;
+  }
+
+  .info-sonando h2 {
+    font-size: 1.7rem;
+  }
+
+  .info-sonando h4 {
+    font-size: 1.2rem;
+  }
+
+  /* CONTROLES */
+  .controls button {
+    font-size: 1.6rem;
+    padding: 8px 14px;
+  }
+
+  /* PROGRESO */
+  .progress span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .sonando-ahora {
+    display: none;
+  }
+
+  .player {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    height: 200px;
+    padding: 12px 16px;
+    background-color: #121212;
+    border-radius: 12px;
+  }
+
+  /* ===================== */
+  /* FILA SUPERIOR
+  /* ===================== */
+  .player .song {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .player .cover img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+  }
+
+  .player .song-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  .player strong {
+    font-size: 1rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .player span {
+    font-size: 0.85rem;
+    color: #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .player .progress {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .player .progress .bar {
+    flex: 1;
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .player .progress .fill {
+    height: 100%;
+    background-color: #ff7a00;
+    border-radius: 2px;
+  }
+
+  .player .progress span {
+    font-size: 0.75rem;
+    color: #ccc;
+    min-width: 28px;
+    text-align: center;
+  }
+
+  /* ===================== */
+  /* FILA INFERIOR
+  /* ===================== */
+  .player .controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .player .controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  .player .play {
+    font-size: 2.4rem;
+  }
+}
