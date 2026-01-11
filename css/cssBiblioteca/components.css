@@ -156,12 +156,12 @@
   top: 70px;               
   bottom: 85px;            
   right: 40px;                
-  width: 40%;              
+  width: 20%;              
   display: flex;
   justify-content: center; 
   padding: 20px;           
   box-sizing: border-box;
-  background: linear-gradient( 180deg, #3a3a3a 0%, #1e1e1e 40%, #121212 100% ); 
+  background: transparent; 
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
   border-radius: 16px;
 }
@@ -206,4 +206,14 @@
   font-weight: 400;
   opacity: 0.8;
 }
-
+.sonando-card {
+    background: linear-gradient(
+        160deg,
+        #ffae00  10%,
+        #ff9800 20%,
+        #ff5722 80%
+    );
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+}

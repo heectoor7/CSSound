@@ -46,11 +46,6 @@
 }
 
 
-/* BRILLO QUE SE MUEVE ALREDEDOR DEL MODAL */
-.artist-modal.active .artist-modal-content {
-  position: relative;
-  animation: brilloCircular 3s linear infinite;
-}
 
 /* SOLO BRILLO NARANJA ALREDEDOR DEL MODAL */
 .artist-modal.active .artist-modal-content {
