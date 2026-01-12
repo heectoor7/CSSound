@@ -1,5 +1,18 @@
 @media (max-width: 992px) {
 
+  #search-input {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .navbar-nav.ms-4 {
+    flex-direction: column;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-top: 10px;
+  }
+
   /* ============================= */
   /* TÍTULOS */
   /* ============================= */
@@ -51,6 +64,19 @@
 }
 
 @media (max-width: 576px) {
+
+  #search-input {
+    font-size: 14px;
+  }
+
+  .navbar-nav.ms-4,
+  .navbar-nav.ms-auto {
+    text-align: center;
+  }
+
+  .lista-canciones {
+    margin-bottom: 200px;
+  }
 
   .sonando-ahora {
     display: none;

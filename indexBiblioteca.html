@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cssBiblioteca/style.css" />
-    <link rel="stylesheet" href="css/cssBiblioteca/responsive.css" />
 </head>
 
 <body>
@@ -17,36 +16,39 @@
     <!-- ====================================================== -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top px-4">
-        <a class="navbar-brand fw-bold" href="index.html">
-            <span class="css-highlight">CSS</span>ound
-        </a>
+    <a class="navbar-brand fw-bold" href="index.html">
+      <span class="css-highlight">CSS</span>ound
+    </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-4">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="indexBiblioteca.html">Tu biblioteca</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <input type="search" id="search-input" name="q" placeholder="Buscar canción" required>
-                    </a>
-                </li>
-            </ul>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-4">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indexBiblioteca.html">Tu biblioteca</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <input type="search" id="search-input" name="q" placeholder="Buscar canción" required>
+          </a>
+        </li>
+      </ul>
 
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-danger" href="index.html">Cerrar sesión</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <button class="btn btn-outline-warning ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Login
+          </button>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
 
     <!-- ====================================================== -->
     <!-- MAIN -->
@@ -222,6 +224,117 @@
             <span>3:21</span>
         </div>
     </footer>
+
+
+    <!-- ====================================================== -->
+    <!-- MODAL LOGIN -->
+    <!-- ====================================================== -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white rounded-4">
+
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">
+                        <span style="color:#ff7a00;">CSS</span>ound Login
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form action="index.html" class="caja-login p-0 bg-transparent shadow-none border-0">
+
+                        <div class="grupo-formulario">
+                            <label>Usuario</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+
+                        <div class="grupo-formulario mt-3">
+                            <label>Contraseña</label>
+                            <input type="password" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+
+                        <div class="recordarme mt-3">
+                            <input type="checkbox">
+                            <label class="ms-2">Recordarme</label>
+                        </div>
+
+                        <button type="submit" class="boton-entrar d-block w-100 mt-4">
+                            Entrar
+                        </button>
+
+                        <a href="#" class="boton-registro d-block text-center mt-2" data-bs-dismiss="modal"
+                            data-bs-toggle="modal" data-bs-target="#registroModal">
+                            ¿No tienes cuenta?
+                        </a>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ====================================================== -->
+    <!-- MODAL REGISTRO -->
+    <!-- ====================================================== -->
+
+    <div class="modal fade" id="registroModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white rounded-4">
+
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">
+                        <span style="color:#ff7a00;">CSS</span>ound Registro
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form action="index.html" class="caja-registro p-0 bg-transparent shadow-none border-0">
+
+                        <div class="grupo-formulario">
+                            <label>Nombre completo</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+
+                        <div class="grupo-formulario mt-3">
+                            <label>Fecha de nacimiento</label>
+                            <input type="date" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+
+                        <div class="grupo-formulario mt-3">
+                            <label>Correo electrónico</label>
+                            <input type="email" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+
+                        <div class="grupo-formulario mt-3">
+                            <label>Nombre de usuario</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" required
+                                pattern="^\S+$">
+                        </div>
+
+                        <div class="grupo-formulario mt-3">
+                            <label>Contraseña</label>
+                            <input type="password" class="form-control bg-dark text-white border-secondary" required
+                                minlength="6">
+                        </div>
+
+                        <button type="submit" class="boton-registrarse d-block w-100 mt-4">
+                            Registrarse
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="js/app.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
 </body>

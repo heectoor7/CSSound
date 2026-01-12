@@ -3,5 +3,6 @@
 @import url("layout.css");
 @import url("components.css");
 @import url("artists.css");
-@import url("modal.css");
+@import url("modales.css");
 @import url("scrollbar.css");
+@import url("responsive.css");
