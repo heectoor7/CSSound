@@ -1,0 +1,90 @@
+/* ===== CARD GENERAL ===== */
+.podcast-card {
+  background: #1e1e1e; 
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border-color: rgb(255, 145, 0);
+}
+
+.podcast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== CONTENEDOR DE IMAGEN CUADRADO ===== */
+.podcast-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* mantiene forma cuadrada */
+  background: #d0d0d0; /* gris para bordes visibles */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== IMAGEN COMPLETA ===== */
+.podcast-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* muestra la imagen completa */
+}
+
+/* ===== OVERLAY ===== */
+.podcast-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.podcast-card:hover .podcast-overlay {
+  opacity: 1;
+}
+
+/* ===== BOTÓN PLAY ===== */
+.podcast-play-btn-sm {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent, #ff4d4d);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.podcast-play-btn-sm:hover {
+  transform: scale(1.15);
+  background: #e63939;
+}
+
+/* ===== INFO ===== */
+.podcast-info {
+  padding: 15px;
+}
+
+.podcast-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.podcast-host {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.podcast-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #444;
+}
