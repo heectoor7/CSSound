@@ -4,223 +4,536 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSSound - Acceso</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <title>CSSound - Inicio</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #121212, #000000);
-      color: white;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: url(multimedia/img/inicio/fondoChat.png);
-      background-size: cover;
-      background-position: center;
-    }
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/cssApp/style.css" />
+  <link rel="stylesheet" href="css/cssApp/responsive.css" />
 
-    .caja-login {
-      background: #181818;
-      padding: 40px;
-      border-radius: 10px;
-      width: 350px;
-      box-shadow: 0 0 20px rgba(148, 148, 148, 0.5);
-      border: 1px solid #333;
-      text-align: center;
-    }
-
-    h1 {
-      margin-bottom: 30px;
-      font-size: 2.5rem;
-    }
-
-    h1 span {
-      color: #ff7a00;
-    }
-
-    .subtitulo {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-      color: #b3b3b3;
-    }
-
-    .grupo-formulario {
-      margin-bottom: 20px;
-      text-align: left;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      color: #b3b3b3;
-      font-size: 14px;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      background: #282828;
-      border: 1px solid #333;
-      border-radius: 5px;
-      color: white;
-      font-size: 16px;
-    }
-
-    input:focus {
-      outline: none;
-      border-color: #ff7a00;
-    }
-
-    .recordarme {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 25px;
-      color: #b3b3b3;
-      font-size: 14px;
-    }
-
-    .recordarme input {
-      width: auto;
-    }
-
-    .boton-entrar,
-    .boton-registro {
-      display: inline-block;
-      width: 100%;
-      padding: 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: background 0.3s;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .boton-entrar {
-      background: #ff7a00;
-      color: #000000;
-    }
-
-    .boton-entrar:hover {
-      background: #ff8c1a;
-    }
-
-    .boton-registro {
-      background: #282828;
-      color: #ff7a00;
-      border: 1px solid #ff7a00;
-    }
-
-    .boton-registro:hover {
-      background: #ff7a00;
-      color: black;
-    }
-
-    /* Tablets (992px) */
-    @media (max-width: 992px) {
-      .caja-login {
-        width: 300px;
-        padding: 30px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .subtitulo {
-        font-size: 1rem;
-        margin-bottom: 20px;
-      }
-
-      input {
-        padding: 10px;
-        font-size: 15px;
-      }
-
-      .boton-entrar,
-      .boton-registro {
-        padding: 12px;
-        font-size: 16px;
-      }
-    }
-
-    /* Responsive para Móviles (576px) */
-    @media (max-width: 576px) {
-      body {
-        min-height: 100vh;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .caja-login {
-        width: 100%;
-        max-width: 320px;
-        padding: 25px;
-        margin: 0 auto;
-        /* centrado horizontal */
-      }
-
-      h1 {
-        font-size: 1.7rem;
-      }
-
-      .subtitulo {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
-      }
-
-      input {
-        padding: 10px;
-        font-size: 14px;
-      }
-
-      .recordarme {
-        font-size: 13px;
-      }
-
-      .boton-entrar,
-      .boton-registro {
-        padding: 10px;
-        font-size: 15px;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <div class="caja-login">
-    <h1><span>CSS</span>ound</h1>
-    <div class="subtitulo">Login</div>
+  <!-- ====================================================== -->
+  <!-- NAVBAR -->
+  <!-- ====================================================== -->
 
-    <div class="grupo-formulario">
-      <label for="usuario">Usuario</label>
-      <input type="text" id="usuario" placeholder="Introduce tu usuario">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top px-4">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <span class="css-highlight">CSS</span>ound
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-4">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indexBiblioteca.html">Tu biblioteca</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <input type="search" id="search-input" name="q" placeholder="Buscar canción" required>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <button class="btn btn-outline-warning ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Login
+          </button>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====================================================== -->
+  <!-- MAIN -->
+  <!-- ====================================================== -->
+
+  <main class="container-fluid main-content">
+    <div class="row g-4">
+
+      <!-- ====================================================== -->
+      <!-- COLUMNA IZQUIERDA: SLIDER -->
+      <!-- ====================================================== -->
+
+      <div class="col-12 col-lg-4">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Video 1 -->
+            <div class="carousel-item active">
+              <video class="d-block w-100" autoplay muted loop>
+                <source src="multimedia/videos/disco.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+              </video>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="carousel-item">
+              <video class="d-block w-100" autoplay muted loop>
+                <source src="multimedia/videos/premium.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+              </video>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="carousel-item">
+              <video class="d-block w-100" autoplay muted loop>
+                <source src="multimedia/videos/podcast.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+              </video>
+            </div>
+
+          </div>
+
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- COLUMNA DERECHA: CANCIONES -->
+      <!-- ====================================================== -->
+      <div class="col-12 col-lg-8">
+        <h2 class="mb-4" style="color: var(--accent);">Canciones</h2>
+
+        <div class="row g-3">
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/The-Dark-Side-of-the-Moon-03.jpg" alt="">
+              <h6>The Dark Side of the Moon</h6>
+              <p>Pink Floyd</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/thriller.jpg" alt="">
+              <h6>Thriller</h6>
+              <p>Michael Jackson</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/Abbey.jfif" alt="">
+              <h6>Abbey Road</h6>
+              <p>The Beatles</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/Back.jpg" alt="">
+              <h6>Back in Black</h6>
+              <p>AC/DC</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/Wall.jfif" alt="">
+              <h6>The Wall</h6>
+              <p>Pink Floyd</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/Fleet.jpg" alt="">
+              <h6>Rumours</h6>
+              <p>Fleetwood Mac</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/hotel.jpg" alt="">
+              <h6>Hotel California</h6>
+              <p>Eagles</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/neverminf.jfif" alt="">
+              <h6>Nevermind</h6>
+              <p>Nirvana</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/led.jpg" alt="">
+              <h6>Led Zeppelin IV</h6>
+              <p>Led Zeppelin</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/born.jpg" alt="">
+              <h6>Born to Run</h6>
+              <p>Bruce Springsteen</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/wish-you-were-here-pink-floyd.webp" alt="">
+              <h6>Wish You Were Here</h6>
+              <p>Pink Floyd</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="music-card">
+              <img src="multimedia/img/portadas/USA.jpg" alt="">
+              <h6>Born In The USA</h6>
+              <p>Bruce Springsteen</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <h2 class="titulo-artistas" style="color: var(--accent);">Artistas más escuchados 2025</h2>
+    <div class="horizontal-scroll">
+
+      <!-- TARJETA BAD BUNNY -->
+      <div class="artista-card" data-name="Bad Bunny" data-genre="Reggaetón · Trap"
+        data-desc="Bad Bunny es el huracán cultural que redefinió la música urbana y la identidad de una generación. Más que un artista, es un símbolo de autenticidad, desafiando normas con su estilo audaz y su mezcla única de trap, reggaetón y experimentación."
+        data-songs="" data-img="multimedia/img/artistas/badBunny.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/badBunny.jpg" alt="Bad Bunny">
+          <h5 class="nombre-artista">Bad Bunny</h5>
+        </div>
+      </div>
+
+      <!-- TARJETA DRAKE -->
+      <div class="artista-card" data-name="Drake" data-genre="Rap · Hip Hop"
+        data-desc="Drake es el titán del hip-hop contemporáneo, dominando las listas globales por más de una década. Maestro del R&B melódico y el rap introspectivo, ha redefinido el éxito comercial en la era digital con su habilidad para fusionar géneros y crear himnos generacionales."
+        data-songs="" data-img="multimedia/img/artistas/drake.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/drake.jpg" alt="Drake">
+          <h5 class="nombre-artista">Drake</h5>
+        </div>
+      </div>
+
+      <!-- TARJETA TAYLOR SWIFT -->
+      <div class="artista-card" data-name="Taylor Swift" data-genre="Pop · Country"
+        data-desc="Taylor Swift es la narradora maestra de su generación, evolucionando de prodigio country a icono pop global. Su capacidad para reinventarse artísticamente mientras mantiene una conexión íntima con sus fans ha convertido cada álbum en un fenómeno cultural y cada canción en un diario musical compartido."
+        data-songs="" data-img="multimedia/img/artistas/taylorSwift.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/taylorSwift.jpg" alt="Taylor Swift">
+          <h5 class="nombre-artista">Taylor Swift</h5>
+        </div>
+      </div>
+
+      <!-- TARJETA THE WEEKND -->
+      <div class="artista-card" data-name="The Weeknd" data-genre="R&B · Pop"
+        data-desc="The Weeknd es el arquitecto del R&B oscuro y atmosférico, creando un universo sonoro único donde el synth-pop se encuentra con el soul moderno. Con su voz distintiva y producciones cinematográficas, ha llevado el R&B alternativo al mainstream global, explorando temas de decadencia, redención y deseo urbano."
+        data-songs="" data-img="multimedia/img/artistas/theWeekend.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/theWeekend.jpg" alt="The Weeknd">
+          <h5 class="nombre-artista">The Weeknd</h5>
+        </div>
+      </div>
+
+      <!-- TARJETA BRUNO MARS -->
+      <div class="artista-card" data-name="Bruno Mars" data-genre="Pop · Funk"
+        data-desc="Bruno Mars es el showman perfecto de la era moderna, rescatando el funk, soul y R&B vintage para audiencias contemporáneas. Su impecable sentido del espectáculo, voz carismática y producción impecable lo han coronado como el heredero natural de leyendas como James Brown, Prince y Michael Jackson en un solo artista."
+        data-songs="" data-img="multimedia/img/artistas/BrunoMars.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/BrunoMars.jpg" alt="Bruno Mars">
+          <h5 class="nombre-artista">Bruno Mars</h5>
+        </div>
+      </div>
+
+      <!-- TARJETA DELLAFUENTE -->
+      <div class="artista-card" data-name="Dellafuente" data-genre="Flamenco · Urban"
+        data-desc="Dellafuente es el pionero que fusionó el flamenco tradicional con sonidos urbanos modernos, creando un género híbrido único. Desde las calles de Granada hasta escenarios internacionales, su autenticidad y estilo personal han abierto caminos para una nueva generación de artistas flamencos urbanos, manteniendo siempre sus raíces andaluzas."
+        data-songs="" data-img="multimedia/img/artistas/Dellafuente.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/Dellafuente.jpg" alt="Dellafuente">
+          <h5 class="nombre-artista">Dellafuente</h5>
+        </div>
+      </div>
+
+      <!-- TARJETA ELADIO -->
+      <div class="artista-card" data-name="Eladio" data-genre="Rap · Trap"
+        data-desc="Eladio Carrión es el puente entre el trap latino y el rap anglosajón, dominando ambos mundos con fluidez bilingüe. Su técnica lírica precisa, flow versátil y producciones innovadoras lo han posicionado como uno de los referentes más importantes del rap latino contemporáneo, representando a Puerto Rico en la escena global."
+        data-songs="" data-img="multimedia/img/artistas/Eladio.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/Eladio.jpg" alt="Eladio">
+          <h5 class="nombre-artista">Eladio</h5>
+        </div>
+      </div>
+
+      <!-- TARJETA PAULO -->
+      <div class="artista-card" data-name="Paulo" data-genre="Rap · Trap"
+        data-desc="Paulo Londra es el fenómeno argentino que conquistó el mundo con su flow melódico y letras universales. Representando la nueva ola del trap latino, su estilo accesible pero auténtico ha resonado globalmente, demostrando el poder del talento crudo y las historias genuinas desde Córdoba hasta las listas internacionales."
+        data-songs="" data-img="multimedia/img/artistas/Paulo.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/Paulo.jpg" alt="Paulo">
+          <h5 class="nombre-artista">Paulo</h5>
+        </div>
+      </div>
+
+      <!-- TARJETA KENDRICK LAMAR -->
+      <div class="artista-card" data-name="Kendrick Lamar" data-genre="Rap · Hip Hop"
+        data-desc="Kendrick Lamar es el poeta laureado del hip-hop moderno, elevando el rap a forma de arte literario y comentario social. Sus álbumes conceptuales, lírica compleja y profundidad temática lo han establecido no solo como un rapero, sino como una de las voces más importantes de su generación, ganador del Pulitzer y voz de la conciencia social."
+        data-songs="" data-img="multimedia/img/artistas/Kendrick.jpg">
+        <div class="card-face card-front">
+          <img src="multimedia/img/artistas/Kendrick.jpg" alt="Kendrick Lamar">
+          <h5 class="nombre-artista">Kendrick Lamar</h5>
+        </div>
+      </div>
     </div>
 
-    <div class="grupo-formulario">
-      <label for="contrasena">Contraseña</label>
-      <input type="password" id="contrasena" placeholder="Introduce tu contraseña">
+
+    <!-- ================================ -->
+    <!-- SECCIÓN PODCASTS -->
+    <!-- ================================ -->
+
+    <!-- SECCIÓN PODCASTS -->
+    <div class="podcast-container">
+
+      <!-- Columna izquierda -->
+      <div class="podcast-text">
+        <h2>Podcast Destacado</h2>
+
+        <h3>El Arte de la Música Urbana</h3>
+
+        <p class="podcast-invitado">
+          <strong>Invitado especial:</strong> Paulo Londra
+        </p>
+
+        <p class="podcast-desc">
+          En este episodio, exploramos la evolución de la música urbana latina.
+          Paulo Londra comparte su experiencia en la industria y su visión del género.
+          Un análisis profundo de letras, ritmos y tendencias.
+        </p>
+
+        <div class="podcast-details">
+          <span class="podcast-detail-item">🎙️ Episodio 42</span>
+          <span class="podcast-detail-item">⏱️ 58 min</span>
+          <span class="podcast-detail-item">📅 14 Ene 2026</span>
+        </div>
+
+        <button class="podcast-play-btn">
+          ▶ Reproducir ahora
+        </button>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="podcast-image">
+        <img src="multimedia/img/podcast/PodcastPauloLondra.jpg" alt="Podcast con Paulo Londra">
+      </div>
     </div>
 
-    <div class="recordarme">
-      <input type="checkbox" id="recordarme">
-      <label for="recordarme">Recordarme</label>
+  </main>
+
+  <!-- ====================================================== -->
+  <!-- PLAYER -->
+  <!-- ====================================================== -->
+
+  <footer class="player">
+    <div class="song">
+      <div class="cover">
+        <img src="multimedia/img/portadas/thriller.jpg" alt="">
+      </div>
+      <div>
+        <strong>Thriller</strong>
+        <span>Michael Jackson</span>
+      </div>
     </div>
 
-    <a href="indexApp.html" class="boton-entrar">Entrar</a>
+    <div class="controls">
+      <button>⏮</button>
+      <button class="play">▶</button>
+      <button>⏭</button>
+    </div>
 
-    <a href="indexRegistro.html" class="boton-registro">¿No tienes cuenta?</a>
+    <div class="progress">
+      <span>0:58</span>
+      <div class="bar">
+        <div class="fill"></div>
+      </div>
+      <span>3:21</span>
+    </div>
+  </footer>
+
+  <!-- ====================================================== -->
+  <!-- MODAL ARTISTA -->
+  <!-- ====================================================== -->
+
+  <div id="artistModal" class="artist-modal">
+    <div class="artist-modal-content">
+      <span class="close-modal">&times;</span>
+
+      <img id="modalImg" src="" alt="">
+      <h3 id="modalName"></h3>
+      <p id="modalGenre"></p>
+      <small id="modalSongs"></small>
+      <p id="modalDesc"></p>
+
+      <small id="modalSongs"></small>
+    </div>
   </div>
+
+  <!-- ====================================================== -->
+  <!-- MODAL LOGIN -->
+  <!-- ====================================================== -->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white rounded-4">
+
+        <div class="modal-header border-0">
+          <h5 class="modal-title">
+            <span style="color:#ff7a00;">CSS</span>ound Login
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <form action="index.html" class="caja-login p-0 bg-transparent shadow-none border-0">
+
+            <div class="grupo-formulario">
+              <label>Usuario</label>
+              <input type="text" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+
+            <div class="grupo-formulario mt-3">
+              <label>Contraseña</label>
+              <input type="password" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+
+            <div class="recordarme mt-3">
+              <input type="checkbox">
+              <label class="ms-2">Recordarme</label>
+            </div>
+
+            <button type="submit" class="boton-entrar d-block w-100 mt-4">
+              Entrar
+            </button>
+
+            <a href="#" class="boton-registro d-block text-center mt-2" data-bs-dismiss="modal" data-bs-toggle="modal"
+              data-bs-target="#registroModal">
+              ¿No tienes cuenta?
+            </a>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- MODAL REGISTRO -->
+  <!-- ====================================================== -->
+
+  <div class="modal fade" id="registroModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white rounded-4">
+
+        <div class="modal-header border-0">
+          <h5 class="modal-title">
+            <span style="color:#ff7a00;">CSS</span>ound Registro
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <form action="index.html" class="caja-registro p-0 bg-transparent shadow-none border-0">
+
+            <div class="grupo-formulario">
+              <label>Nombre completo</label>
+              <input type="text" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+
+            <div class="grupo-formulario mt-3">
+              <label>Fecha de nacimiento</label>
+              <input type="date" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+
+            <div class="grupo-formulario mt-3">
+              <label>Correo electrónico</label>
+              <input type="email" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+
+            <div class="grupo-formulario mt-3">
+              <label>Nombre de usuario</label>
+              <input type="text" class="form-control bg-dark text-white border-secondary" required pattern="^\S+$">
+            </div>
+
+            <div class="grupo-formulario mt-3">
+              <label>Contraseña</label>
+              <input type="password" class="form-control bg-dark text-white border-secondary" required minlength="6">
+            </div>
+
+            <button type="submit" class="boton-registrarse d-block w-100 mt-4">
+              Registrarse
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ====================================================== -->
+<!-- MODAL COOKIES -->
+<!-- ====================================================== -->
+
+<div class="modal fade show" id="cookiesBannerModal" tabindex="-1" aria-modal="true" role="dialog" style="display: block;">
+  <div class="modal-dialog modal-dialog-centered modal-full-width">
+    <div class="modal-content bg-dark text-white rounded-4 shadow-lg p-4 d-flex flex-column flex-sm-row align-items-center justify-content-between">
+
+      <div class="cookies-message mb-3 mb-sm-0 text-center text-sm-start">
+        Al hacer clic en <strong>“Aceptar todas las cookies”</strong>, aceptas el uso de cookies en tu dispositivo para mejorar la navegación, analizar el uso y ayudarnos en esfuerzos de marketing.
+      </div>
+
+      <div class="cookies-buttons d-flex gap-2 justify-content-center flex-wrap">
+        <button id="btnCookiesAccept" class="btn btn-warning btn-cookies-accept">
+          Aceptar todas
+        </button>
+        <button id="btnCookiesAccept" class="btn btn-outline-warning btn-cookies-rechazar">
+          Rechazar todas
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <script src="js/app.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

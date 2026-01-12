@@ -19,16 +19,16 @@ if (modal) {
       tarjetasArtista.forEach(c => {
         c.classList.remove("animada"); // o "seleccionada" o "resaltada"
       });
-      
+
       // 2. SEGUNDO: Añadir animación a esta tarjeta
       card.classList.add("animada"); // Usa el mismo nombre que en tu CSS
-      
+
       // 3. TERCERO: Tu código actual del modal
       modalImg.src = card.dataset.img;
       modalName.textContent = card.dataset.name;
       modalGenre.textContent = card.dataset.genre;
       modalSongs.textContent = card.dataset.songs;
-      
+
       // Asegúrate que esto coincida con tu HTML
       const descripcion = card.getAttribute("data-desc") || "";
       document.getElementById("modalDesc").textContent = descripcion;
@@ -118,5 +118,29 @@ filasCancion.forEach(fila => {
     const artista = fila.querySelector("span").textContent;
 
     actualizarCancion(imagen, titulo, artista);
+  });
+});
+
+// =====================================
+// MODAL COOKIES
+// =====================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  var cookiesModalEl = document.getElementById('cookiesBannerModal');
+  var cookiesModal = new bootstrap.Modal(cookiesModalEl, {
+    backdrop: true,
+    keyboard: false
+  });
+
+  cookiesModal.show();
+
+  document.getElementById('btnCookiesAccept').addEventListener('click', function () {
+    cookiesModal.hide();
+  });
+  document.getElementById('btnCookiesReject').addEventListener('click', function () {
+    cookiesModal.hide();
+  });
+  document.getElementById('btnCookiesSettings').addEventListener('click', function () {
+    alert("Aquí puedes implementar tu panel de configuración de cookies");
   });
 });

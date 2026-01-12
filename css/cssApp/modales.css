@@ -1,0 +1,169 @@
+.artist-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.artist-modal.active {
+  display: flex;
+}
+
+.artist-modal-content {
+  background: #181818;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  position: relative;
+  animation: zoomIn 0.3s ease;
+}
+
+.artist-modal-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* 
+  LOGIN Y REGISTRO
+*/
+.caja-login {
+  background: #181818;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.grupo-formulario label {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.grupo-formulario input {
+  background: #282828;
+  border: 1px solid #333;
+  color: white;
+}
+
+.boton-entrar {
+  background: #ff7a00;
+  color: black;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.boton-entrar:hover {
+  background: #ff8c1a;
+}
+
+.boton-registro {
+  background: transparent;
+  border: 1px solid #ff7a00;
+  color: #ff7a00;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+/* RESGISTRO */ 
+.caja-registro {
+  background: #181818;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.boton-registrarse {
+  background: #ff7a00;
+  color: black;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.boton-registrarse:hover {
+  background: #ff8c1a;
+}
+
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+/* ==============================
+  MODAL COOKIES
+============================== */
+
+#cookiesBannerModal .modal-dialog {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 95%;
+  margin: 0;
+  z-index: 1055;
+}
+
+#cookiesBannerModal .modal-content {
+  border-radius: 12px;
+  background-color: rgba(24,24,24,0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+#cookiesBannerModal .cookies-buttons button {
+  min-width: 140px;
+  padding: 0.45rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#cookiesBannerModal .btn-cookies-rechazar {
+  background-color: transparent;
+  color: #ff7a00;
+  border: 1px solid #ff7a00;
+}
+
+#cookiesBannerModal .btn-cookies-rechazar:hover {
+  background-color: #ff7a00;
+  color: black;
+}
+
+#cookiesBannerModal .btn-cookies-accept {
+  background-color: #ff7a00;
+  color: black;
+  border: none;
+}
+
+#cookiesBannerModal .btn-cookies-accept:hover {
+  background-color: #ff8c1a;
+  color: black;
+}
