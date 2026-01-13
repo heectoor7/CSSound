@@ -18,8 +18,8 @@
 .podcast-img-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* mantiene forma cuadrada */
-  background: #d0d0d0; /* gris para bordes visibles */
+  aspect-ratio: 1 / 1;
+  background: var(--card-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,7 @@
 .podcast-img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* muestra la imagen completa */
+  object-fit: contain;
 }
 
 /* ===== OVERLAY ===== */
@@ -44,7 +44,8 @@
   transition: opacity 0.3s ease;
 }
 
-.podcast-card:hover .podcast-overlay {
+.podcast-card:hover .podcast-overlay,
+.music-card:hover .podcast-overlay {
   opacity: 1;
 }
 
