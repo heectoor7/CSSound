@@ -1,5 +1,9 @@
 @media (max-width: 992px) {
 
+  .footer-info {
+    display: none;
+  }
+  
   #search-input {
     width: 100%;
     margin-top: 8px;
@@ -79,6 +83,10 @@
   }
 
   .sonando-ahora {
+    display: none;
+  }
+
+  .footer-info {
     display: none;
   }
 
